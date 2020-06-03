@@ -12,10 +12,16 @@ console.log(numeroRandom);
 }
 
 
+
 // In seguito deve chiedere all’utente di inserire un numero alla volta,
 // sempre compreso tra 1 e 100.
 
-var user = prompt('inserisci un numero');
+// var user = prompt('inserisci un numero');
+// var i = 0;
+// while (user ==) {
+//   i++
+// }
+
 // Se il numero è presente nella lista dei numeri generati, la partita termina,
 // altrimenti si continua chiedendo all’utente un altro numero.
 // La partita termina quando il giocatore inserisce un numero “vietato” o
