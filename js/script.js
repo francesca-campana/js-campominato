@@ -5,10 +5,50 @@ function numberGenerator() {
   var numero = Math.floor(Math.random() * 100) + 1;
   return numero;
 }
-// utilizzo la funzione per generare 16 numeri nel range 1-100
-for (var i = 1; i <= 16; i++) {
-var numeroRandom = numberGenerator();
-console.log(numeroRandom);
+
+var bomba = [];
+var i = 0;
+while (bomba.length < 16) {
+  var numeriRandom = numberGenerator();
+
+  if (!bomba.includes(numeriRandom)) {
+      bomba.push(numeriRandom);
+     }
+
+  i++
+
+}
+console.log(bomba);
+
+
+
+
+
+var userNumber = parseInt(prompt('Inserisci un numero'));
+console.log(userNumber);
+
+var risultato = ricercaNumero(bomba, userNumber);
+// console.log(risultato);
+
+
+
+function ricercaNumero(bomba, userNumber){
+  var trovato= false;
+  for (var i = 0; i < bomba.length; i++) {
+    var elemento  =  bomba.length[i];
+    console.log(elemento);
+
+    if (elemento === userNumber) {
+      trovato = true;
+    }
+  }
+  if (trovato == true) {
+    console.log('hai perso');
+
+  }else {
+     console.log('continua');
+  }
+
 }
 
 
@@ -16,11 +56,7 @@ console.log(numeroRandom);
 // In seguito deve chiedere all’utente di inserire un numero alla volta,
 // sempre compreso tra 1 e 100.
 
-// var user = prompt('inserisci un numero');
-// var i = 0;
-// while (user ==) {
-//   i++
-// }
+
 
 // Se il numero è presente nella lista dei numeri generati, la partita termina,
 // altrimenti si continua chiedendo all’utente un altro numero.
