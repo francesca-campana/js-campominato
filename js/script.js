@@ -28,28 +28,31 @@ var userNumber = parseInt(prompt('Inserisci un numero'));
 console.log(userNumber);
 
 var risultato = ricercaNumero(bomba, userNumber);
-// console.log(risultato);
 
 
 
-function ricercaNumero(bomba, userNumber){
-  var trovato= false;
-  for (var i = 0; i < bomba.length; i++) {
-    var elemento  =  bomba.length[i];
-    console.log(elemento);
 
-    if (elemento === userNumber) {
+function ricercaNumero(lista, valore){
+  var trovato = false;
+  for (var i = 0; i < lista.length; i++) {
+    var elemento  =  lista[i];
+    // console.log(elemento);
+
+    if (elemento === valore) {
       trovato = true;
     }
-  }
-  if (trovato == true) {
-    console.log('hai perso');
+    if (trovato == true) {
+      console.log('hai perso');
 
-  }else {
-     console.log('continua');
+    }else {
+      userNumber = parseInt(prompt('Inserisci un numero'));
+      console.log(userNumber);
+    }
   }
 
 }
+
+
 
 
 
