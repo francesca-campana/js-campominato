@@ -34,7 +34,7 @@ console.log(bomba);
 
 //Creo un ciclo che mi permette di proseguire nel gioco fintanto che il numero
 //immesso non sia stato trovato nella lista di bombe e
-//non che abbia esaurito le giocate massime, altrimenti il gioco si ferma.
+// che non abbia esaurito le giocate massime, altrimenti il gioco si ferma.
 
 var punteggio = 0;
 var bombaTrovata = false;
@@ -58,9 +58,10 @@ if (bombaTrovata) {
   console.log('Hai vinto il tuo punteggio è ' + punteggio);
 }
 
-//-----------FUNZIONI---------//
+// FUNZIONI //
+
 //Questa funzione stabilisce la tipologia di difficoltà del gioco attraverso il livello;
-//A livello b è associata un range di giocate massime che può fare il player
+//Ad ogni livello è associato un range di giocate massime che può fare il player
 function rangeDifficolta(valore){
   var valore;
   switch (valore) {
